@@ -2,6 +2,8 @@
 
 A small macOS menu bar app for people who use ExpressVPN but also want iCloud Private Relay to work when ExpressVPN is not in use.
 
+This is an independent utility. It is not made by, endorsed by, sponsored by, or affiliated with Apple, iCloud, Private Relay, ExpressVPN, or Express Technologies Ltd.
+
 ## Who this helps
 
 This may help if:
@@ -37,6 +39,8 @@ ExpressVPN mode:
 
 The app is unsigned/not notarized. On first launch, macOS may require right-clicking the app and choosing Open.
 
+Only install this if you are comfortable using an unsigned community utility that changes ExpressVPN's local LaunchDaemon state.
+
 ## Why helper tools are required
 
 macOS requires administrator privileges to enable or disable system LaunchDaemons. The app installs two root-owned helper commands and a narrow sudo rule for the current Mac user.
@@ -59,9 +63,21 @@ The uninstaller does not remove ExpressVPN itself.
 ## Safety notes
 
 - This app changes ExpressVPN LaunchDaemon state.
+- This app does not bypass ExpressVPN subscriptions, licensing, account controls, payments, region restrictions, or security features.
+- This app does not modify ExpressVPN's app bundle or redistribute ExpressVPN software.
 - It is intended for macOS users who understand the tradeoff between Private Relay mode and ExpressVPN mode.
 - Do not edit the installed helper commands after installation. They are installed as root-owned files so normal users cannot modify what the passwordless sudo rule runs.
 - Review the included source before installing if you are unsure.
+
+## Legal and trademark notes
+
+Apple, iCloud, Private Relay, macOS, and ExpressVPN names are used only to describe compatibility and the specific services this utility switches between.
+
+All trademarks belong to their respective owners. See `TRADEMARKS.md`.
+
+## License
+
+The included source files are released under the MIT License. See `LICENSE`.
 
 ## Current DMG checksum
 
