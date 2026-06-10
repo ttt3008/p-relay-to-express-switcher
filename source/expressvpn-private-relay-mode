@@ -1,0 +1,8 @@
+#!/bin/zsh
+set -eu
+
+/bin/launchctl bootout system /Library/LaunchDaemons/com.express.vpn.daemon.plist 2>/dev/null || true
+/bin/launchctl disable system/com.express.vpn.daemon 2>/dev/null || true
+/bin/launchctl disable system/com.expressvpn.expressvpnd 2>/dev/null || true
+/usr/bin/pkill -f /Applications/ExpressVPN.app/Contents/MacOS/expressvpn-daemon 2>/dev/null || true
+
